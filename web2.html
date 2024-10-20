@@ -4,155 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Dynamic Website</title>
+    <title>My Special Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset some basic styles */
+        * {
             margin: 0;
             padding: 0;
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNkufI8kkEvZyKr-PbiYaw-uohbRcVZEtNdQ&s');
-            background-size: cover;
-            background-repeat: no-repeat;
+            box-sizing: border-box;
         }
 
-        header {
-            background-color: #333;
-            color: #D2B48C;
-            padding: 10px 0;
-            text-align: center;
-        }    
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-        nav {
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header Section */
+        header {
+            height: 100vh;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNkufI8kkEvZyKr-PbiYaw-uohbRcVZEtNdQ&s');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
             text-align: center;
-            background-color: #444;
-            padding: 10px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 2s;
+        }
+
+        header p {
+            font-size: 1.5em;
+            animation: fadeInUp 2s;
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
         }
 
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            margin: 0 20px;
+            font-size: 1.2em;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #D2B48C;
         }
 
+        /* Main Content */
         .main-content {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .main-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Services Section */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
             padding: 20px;
+            width: 300px;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        /* About Me Section */
+        .about {
+            padding: 50px 20px;
+            background-color: #D2B48C;
+            color: #fff;
             text-align: center;
         }
 
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        /* Footer */
         footer {
             background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Modal styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
         }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover, .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1 id="greeting">Welcome To My Work Place</h1>
-    </header>
-
+    <!-- Navigation Bar -->
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a href="#MySelf" id="openModal">About Me!</a>
     </nav>
 
+    <!-- Header / Hero Section -->
+    <header id="home">
+        <div>
+            <h1>Welcome to My Special Website</h1>
+            <p>Creating a unique web experience</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
     <div class="main-content">
-        <h2>Main Content</h2>
-        <p>This is where your content goes. You can add images, text, videos, or anything else you want to display on your website.</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-
-    <!-- Modal Structure -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>About Me</h2>
-            <p>Hello! I'm a web developer who loves creating dynamic and interactive websites. Feel free to explore my work and get in touch!</p>
+        <h2>What We Offer</h2>
+        <div class="services">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Service 1">
+                <h3>Web Development</h3>
+                <p>We create high-quality websites that meet modern standards and user expectations.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Service 2">
+                <h3>Graphic Design</h3>
+                <p>Our design team creates visually stunning graphics that leave an impression.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Service 3">
+                <h3>SEO Optimization</h3>
+                <p>We ensure your website ranks high in search results for better visibility and traffic.</p>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Dynamic Greeting
-        const greeting = document.getElementById('greeting');
-        const hour = new Date().getHours();
-        if (hour < 12) {
-            greeting.textContent = 'Good Morning! Welcome To My Work Place';
-        } else if (hour < 18) {
-            greeting.textContent = 'Good Afternoon! Welcome To My Work Place';
-        } else {
-            greeting.textContent = 'Good Evening! Welcome To My Work Place';
-        }
+    <!-- About Me Section -->
+    <div class="about" id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate web developer with experience in creating interactive and visually appealing websites. My focus is on crafting user-friendly designs with modern functionality. Let's build something great together!</p>
+    </div>
 
-        // Modal Functionality
-        const modal = document.getElementById("myModal");
-        const btn = document.getElementById("openModal");
-        const span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2024 My Special Website | Designed with ❤️</p>
+    </footer>
 
 </body>
 </html>
