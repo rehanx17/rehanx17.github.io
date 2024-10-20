@@ -76,7 +76,22 @@ b{
        
 
           </div>
-        
+
+<footer>
+        &copy; 2024 My Website. All rights reserved.
+    </footer>
+
+    <script>
+        function changeBackground() {
+            // Change the background color of the body
+            const colors = ['#f4f4f4', '#ffcccb', '#add8e6', '#90ee90', '#d3d3d3', '#f08080'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+
+            // Change the message content
+            document.getElementById('message').textContent = 'Background color changed!';
+        }
+    </script>        
        
         
 
