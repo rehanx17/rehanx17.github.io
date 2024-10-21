@@ -150,24 +150,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Button for Changing Background */
-        .bg-btn {
-            margin: 20px auto;
-            display: block;
-            padding: 10px 20px;
-            background-color: #667eea;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .bg-btn:hover {
-            background-color: #764ba2;
-        }
-
     </style>
 </head>
 <body>
@@ -175,7 +157,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
             <li><a href="web.html" target="_blank">Website 1</a></li>
             <li><a href="web2.html" target="_blank">Website 2</a></li>
             <li><a href="web3.html" target="_blank">Website 3</a></li>
@@ -194,22 +176,11 @@
         <h2>Stunning Visuals</h2>
     </div>
 
-    <!-- Button to Change Background Color -->
-    <button class="bg-btn" onclick="changeBackground()">Change Background Color</button>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 My Stunning Website. All rights reserved.</p>
         <p>Follow us on <a href="https://twitter.com" target="_blank">Twitter</a></p>
     </footer>
-
-    <script>
-        // JavaScript function to change background color dynamically
-        function changeBackground() {
-            const colors = ['#f4f4f4', '#e9ecef', '#f8f9fa', '#93C572', '#667eea'];
-            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        }
-    </script>
 
 </body>
 </html>
