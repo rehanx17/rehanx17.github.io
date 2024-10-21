@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Enhanced Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            transition: background-color 0.5s ease;
+            background-image: url('download.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 50px;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px #aaa;
+        }
+
+        /* Header Section */
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Keyframe Animation for Header */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: inline-block;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav li a:hover {
+            background-color: #93C572;
+            color: #333;
+        }
+
+        /* Parallax Section */
+        .parallax {
+            background-image: url('download.jpg');
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parallax h2 {
+            color: white;
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        /* Keyframe Animation for Parallax */
+        @keyframes zoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: #93C572;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #D2B48C;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Button for Changing Background */
+        .bg-btn {
+            margin: 20px auto;
+            display: block;
+            padding: 10px 20px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .bg-btn:hover {
+            background-color: #764ba2;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="web.html" target="_blank">Website 1</a></li>
+            <li><a href="web2.html" target="_blank">Website 2</a></li>
+            <li><a href="web3.html" target="_blank">Website 3</a></li>
+            <li><a href="web4.html" target="_blank">Website 4</a></li>
+            <li><a href="My_Website.html" target="_blank">Website 5</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
+        <h1>Welcome to My Enhanced Website</h1>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="parallax">
+        <h2>Stunning Visuals</h2>
+    </div>
+
+    <!-- Button to Change Background Color -->
+    <button class="bg-btn" onclick="changeBackground()">Change Background Color</button>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Stunning Website. All rights reserved.</p>
+        <p>Follow us on <a href="https://twitter.com" target="_blank">Twitter</a></p>
+    </footer>
+
+    <script>
+        // JavaScript function to change background color dynamically
+        function changeBackground() {
+            const colors = ['#f4f4f4', '#e9ecef', '#f8f9fa', '#93C572', '#667eea'];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+
+</body>
+</html>
