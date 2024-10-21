@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitSphere Website</title>
-    <center><h1><br>Welcome to my GitSphere web page...🔽</h1><img _ngcontent-serverapp-c67=         ""src="https://cdn.mgmtech.org/static/mgmu.ac.in/assets/images/LogoMGM.svg" class="img-fluid" width="180" height="150"><br><br></center>
     <style>
         /* General Reset */
         * {
@@ -35,26 +34,15 @@
 
         /* Header Section */
         header {
-            height: 100vh;
+            height: auto; /* Changed to auto to accommodate content height */
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
             text-align: center;
             background: rgba(0, 0, 0, 0.7);
             color: white;
-            flex-direction: column; /* Added to center items vertically */
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* Keyframe Animation for Header */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            padding: 20px 0; /* Added padding for spacing */
         }
 
         /* Navigation */
@@ -65,7 +53,7 @@
             text-align: center;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            margin-top: 20px; /* Added margin to push it down */
+            margin-top: 20px; /* Added margin to create space below header */
         }
 
         nav ul {
@@ -110,13 +98,6 @@
             font-size: 3em;
             letter-spacing: 2px;
             text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
-            animation: zoomIn 1.5s ease-in-out;
-        }
-
-        /* Keyframe Animation for Parallax */
-        @keyframes zoomIn {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
         }
 
         /* Footer Section */
@@ -155,11 +136,11 @@
 <body>
     <!-- Header Section -->
     <header id="home">
-        <h1>Welcome to My GitSphere Website</h1>
-        <h4>Here’s a paragraph specifically about the links in the navigation section:</h4>
-        <p>"The links in this navigation bar serve as gateways to various parts of my online presence. Each link is designed to take you to a different website, offering a curated collection of content and resources. From my personal homepage to several dedicated websites, these links ensure that you can explore everything I have to offer with ease. Each site opens in a new tab, allowing you to maintain your place while diving deeper into specific topics or projects. Whether you're visiting the 'About Me' section or discovering new external websites, these links keep the navigation smooth and efficient."</p>
-        <h4>"My Enhanced Website," is a visually captivating and interactive platform designed with modern web design principles.</h4>
-        <p>"Featuring a clean and dynamic layout, the site incorporates stunning animations such as smooth transitions, fading text effects, and a parallax scrolling section that draws visitors into the content. The navigation bar is sleek, fixed at the top for easy access, and offers intuitive links to various sections and external websites. The dark, semi-transparent background provides a stylish contrast, while bold typography and vibrant hover effects make the website engaging. Overall, it blends aesthetics and functionality, creating an impressive user experience."</p>
+        <center>
+            <h1><br>Welcome to my GitSphere web page...🔽</h1>
+            <img src="https://cdn.mgmtech.org/static/mgmu.ac.in/assets/images/LogoMGM.svg" class="img-fluid" width="180" height="150">
+            <br><br>
+        </center>
     </header>
 
     <!-- Navigation -->
@@ -178,7 +159,6 @@
     <!-- Parallax Section -->
     <div class="parallax">
         <h2>Stunning Visuals</h2>
-        <h4>"Experience a captivating blend of design and innovation in this visually striking section. Our parallax effect brings the background to life, creating depth and movement that draw you in as you scroll. With bold typography and vibrant imagery, this section is crafted to leave a lasting impression. The smooth transitions and dynamic elements provide a modern, immersive experience that enhances the overall aesthetic of the website. Let the visuals speak for themselves as they elevate the design to new heights."</h4>
     </div>
 
     <!-- Footer Section -->
