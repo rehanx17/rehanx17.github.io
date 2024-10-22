@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitSphere Website</title>
-    <center><h1><br>Welcome to my GitSphere web page...🔽</h1><img _ngcontent-serverapp-c67=         ""src="https://cdn.mgmtech.org/static/mgmu.ac.in/assets/images/LogoMGM.svg" class="img-fluid" width="180" height="150"><br><br></center>
+    <center><h1><br>Welcome to my GitSphere web page...🔽</h1><img src="https://cdn.mgmtech.org/static/mgmu.ac.in/assets/images/LogoMGM.svg" class="img-fluid" width="180" height="150"><br><br></center>
     <style>
         /* General Reset */
         * {
@@ -26,36 +26,11 @@
         }
 
         h1 {
-            color: white;
+            color: skyblue;
             font-size: 50px;
             text-align: center;
             margin-top: 20px;
             text-shadow: 2px 2px #aaa;
-        }
-
-        /* Header Section */
-        header {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            flex-direction: column;
-            padding: 0 20px;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* Keyframe Animation for Header */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
         }
 
         /* Navigation */
@@ -93,6 +68,29 @@
             color: #333;
         }
 
+        /* Navigation Block Section */
+        .nav-block {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            margin: 30px auto;
+            width: 80%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-block h2 {
+            font-size: 2.5em;
+            color: skyblue;
+        }
+
+        .nav-block p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
         /* Parallax Section */
         .parallax {
             background-image: url('download.jpg');
@@ -112,13 +110,6 @@
             font-size: 3em;
             letter-spacing: 2px;
             text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
-            animation: zoomIn 1.5s ease-in-out;
-        }
-
-        /* Keyframe Animation for Parallax */
-        @keyframes zoomIn {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
         }
 
         /* Footer Section */
@@ -159,36 +150,62 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="new2.html">Home</a></li>
-            <li><a href="aboutme.html">About Me</a></li>
-            <li><a href="web.html" target="_blank">Website 1</a></li>
-            <li><a href="web2.html" target="_blank">Website 2</a></li>
-            <li><a href="web3.html" target="_blank">Website 3</a></li>
-            <li><a href="web4.html" target="_blank">Website 4</a></li>
-            <li><a href="My_Website.html" target="_blank">Website 5</a></li>
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#about-section">About Me</a></li>
+            <li><a href="#website1-section" target="_blank">Website 1</a></li>
+            <li><a href="#website2-section" target="_blank">Website 2</a></li>
+            <li><a href="#website3-section" target="_blank">Website 3</a></li>
+            <li><a href="#website4-section" target="_blank">Website 4</a></li>
+            <li><a href="#website5-section" target="_blank">Website 5</a></li>
         </ul>
     </nav>
 
-    <!-- Header Section -->
-    <header id="home">
-        <h1>Welcome to My Enhanced Website</h1>
-        <h4>Here’s a detailed description of the navigation links:</h4>
+    <!-- Home Section -->
+    <section class="nav-block" id="home-section">
+        <h2>Home</h2>
+        <p>This is the main landing page of my portfolio. From here, you can access other sections and explore my content.</p>
+    </section>
 
-        <p><strong>Home (new2.html)</strong>: This is the main landing page of my portfolio. From here, you can access other sections and explore my content.</p>
-        <p><strong>About Me (aboutme.html)</strong>: Learn more about my background, skills, and interests on this page, where I provide an overview of my professional journey.</p>
-        <p><strong>Website 1 (web.html)</strong>: This external website showcases one of my latest projects, where I experimented with modern web design techniques.</p>
-        <p><strong>Website 2 (web2.html)</strong>: On this site, you’ll find a collection of my past work, including coding projects and technical write-ups.</p>
-        <p><strong>Website 3 (web3.html)</strong>: This website features a comprehensive case study that dives deep into a project I completed recently.</p>
-        <p><strong>Website 4 (web4.html)</strong>: A creative space where I share my design-focused projects, including UI/UX work and visual design elements.</p>
-        <p><strong>Website 5 (My_Website.html)</strong>: This page is dedicated to my GitHub profile and includes direct links to my repositories for developers and collaborators.</p>
+    <!-- About Me Section -->
+    <section class="nav-block" id="about-section">
+        <h2>About Me</h2>
+        <p>Learn more about my background, skills, and interests on this page, where I provide an overview of my professional journey.</p>
+    </section>
 
-        <br><h4>"My Enhanced Website," is a visually captivating and interactive platform designed with modern web design principles. Featuring a clean and dynamic layout, the site incorporates stunning animations such as smooth transitions, fading text effects, and a parallax scrolling section that draws visitors into the content. The navigation bar is sleek, fixed at the top for easy access, and offers intuitive links to various sections and external websites. The dark, semi-transparent background provides a stylish contrast, while bold typography and vibrant hover effects make the website engaging. Overall, it blends aesthetics and functionality, creating an impressive user experience.</h4>
-    </header>
+    <!-- Website 1 Section -->
+    <section class="nav-block" id="website1-section">
+        <h2>Website 1</h2>
+        <p>This external website showcases one of my latest projects, where I experimented with modern web design techniques.</p>
+    </section>
+
+    <!-- Website 2 Section -->
+    <section class="nav-block" id="website2-section">
+        <h2>Website 2</h2>
+        <p>On this site, you’ll find a collection of my past work, including coding projects and technical write-ups.</p>
+    </section>
+
+    <!-- Website 3 Section -->
+    <section class="nav-block" id="website3-section">
+        <h2>Website 3</h2>
+        <p>This website features a comprehensive case study that dives deep into a project I completed recently.</p>
+    </section>
+
+    <!-- Website 4 Section -->
+    <section class="nav-block" id="website4-section">
+        <h2>Website 4</h2>
+        <p>A creative space where I share my design-focused projects, including UI/UX work and visual design elements.</p>
+    </section>
+
+    <!-- Website 5 Section -->
+    <section class="nav-block" id="website5-section">
+        <h2>Website 5</h2>
+        <p>This page is dedicated to my GitHub profile and includes direct links to my repositories for developers and collaborators.</p>
+    </section>
 
     <!-- Parallax Section -->
     <div class="parallax">
         <h2>Stunning Visuals</h2>
-        <h4>"Experience a captivating blend of design and innovation in this visually striking section. Our parallax effect brings the background to life, creating depth and movement that draw you in as you scroll. With bold typography and vibrant imagery, this section is crafted to leave a lasting impression. The smooth transitions and dynamic elements provide a modern, immersive experience that enhances the overall aesthetic of the website. Let the visuals speak for themselves as they elevate the design to new heights."</h4>
+        <p>Experience a captivating blend of design and innovation in this visually striking section. Our parallax effect brings the background to life, creating depth and movement that draw you in as you scroll. With bold typography and vibrant imagery, this section is crafted to leave a lasting impression.</p>
     </div>
 
     <!-- Footer Section -->
