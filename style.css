@@ -1,0 +1,29 @@
+header {
+    height: 50px;
+    background-color: white;
+    text-align: end;
+    }
+    a {
+        margin-right: 100px;
+    }
+    
+h1 {
+    background-color: violet;
+    text-align: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RR_Wobml0XD6EsK75ARoyzH-UmkATLrheQ&s");
+}
+h2 {
+    text-align: center;
+}
+body {
+ background-color: black;
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcXE-E7RV0t9FWWQJmVjhoGeEsmkT8_JkmZQ&s");
+ background-size: cover;
+}
+div {
+    height: 300px;
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+    padding-top: 50px;
+}
