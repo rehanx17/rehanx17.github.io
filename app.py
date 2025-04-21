@@ -26,6 +26,7 @@ def index():
 
 @app.route('/book', methods=['POST'])
 def book_appointment():
+    # Getting form data
     name = request.form['name']
     email = request.form['email']
     date = request.form['date']
@@ -52,5 +53,5 @@ def thank_you():
     '''
 
 if __name__ == '__main__':
-    init_db()
+    init_db()  # Initialize the database when the app starts
     app.run(debug=True)
