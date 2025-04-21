@@ -1,43 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Appointment Booking</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Book Your Doctor Appointment</h1>
-        </header>
+from flask import Flask, render_template, request, redirect, url_for
+import sqlite3
 
-        <form action="/book" method="POST" class="appointment-form">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+app = Flask(__name__)
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+# Create SQLite database if it doesn't exist
+def init_db():
+    conn = sqlite3.connect('appointments.db')
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS appointments (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            email TEXT NOT NULL,
+            date TEXT NOT NULL,
+            time TEXT NOT NULL,
+            doctor TEXT NOT NULL
+        )
+    ''')
+    conn.commit()
+    conn.close()
 
-            <label for="date">Date of Appointment:</label>
-            <input type="date" id="date" name="date" required>
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-            <label for="time">Time of Appointment:</label>
-            <input type="time" id="time" name="time" required>
+@app.route('/book', methods=['POST'])
+def book_appointment():
+    # Getting form data
+    name = request.form['name']
+    email = request.form['email']
+    date = request.form['date']
+    time = request.form['time']
+    doctor = request.form['doctor']
 
-            <label for="doctor">Select Doctor:</label>
-            <select id="doctor" name="doctor" required>
-                <option value="Dr. Smith">Dr. Smith</option>
-                <option value="Dr. Johnson">Dr. Johnson</option>
-                <option value="Dr. Lee">Dr. Lee</option>
-            </select>
+    # Insert appointment into the database
+    conn = sqlite3.connect('appointments.db')
+    cursor = conn.cursor()
+    cursor.execute('''
+        INSERT INTO appointments (name, email, date, time, doctor)
+        VALUES (?, ?, ?, ?, ?)
+    ''', (name, email, date, time, doctor))
+    conn.commit()
+    conn.close()
 
-            <button type="submit">Book Appointment</button>
-        </form>
+    return redirect(url_for('thank_you'))
 
-        <footer>
-            <p>&copy; 2025 Doctor Appointment Booking</p>
-        </footer>
-    </div>
-</body>
-</html>
+@app.route('/thank_you')
+def thank_you():
+    return '''
+        <h1>Thank you for booking an appointment!</h1>
+        <p>We have received your appointment request.</p>
+    '''
+
+if __name__ == '__main__':
+    init_db()  # Initialize the database when the app starts
+    app.run(debug=True)
