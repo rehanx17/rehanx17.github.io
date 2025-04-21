@@ -3,56 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-   
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /*background-color: white;*/
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SSeSEPjrl9fq6vdxBRWCLGkqhCQ5EJREmA&s');
-            background-size: cover;
-            /*background-position: center;*/
-            background-repeat: no-repeat;
-        }
-        {
-            <p>Check out this <a href="https://rehanx17.github.io/web.html" target="_blank">amazing website</a> for more information!</p>
-        }
-
-        
-
-        header {
-            background-color: grey;
-            color: #333;
-            padding: 10px 0;
-            text-align: center;
-        }
-           
-        
-        /*header {
-            
-            color: #D2B48C;
-            padding: 1rem;
-            text-align: center;
-        }*/
-        main {
-            padding: 1rem;
-        }
-        footer {
-            
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>   
-        <nav>
-            <a h
+    <div class="container">
+        <header>
+            <h1>Book Your Doctor Appointment</h1>
+        </header>
+
+        <form action="/book" method="POST" class="appointment-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Date of Appointment:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time of Appointment:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="Dr. Smith">Dr. Smith</option>
+                <option value="Dr. Johnson">Dr. Johnson</option>
+                <option value="Dr. Lee">Dr. Lee</option>
+            </select>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+
+        <footer>
+            <p>&copy; 2025 Doctor Appointment Booking</p>
+        </footer>
+    </div>
+</body>
+</html>
