@@ -27,7 +27,8 @@ def contact():
     new_submission = ContactSubmission(name=name, email=email, message=message)
     db.session.add(new_submission)
     db.session.commit()
-    return redirect('/')
+    return redirect('/thank-you')
+
 
 @app.route('/admin')
 def admin():
