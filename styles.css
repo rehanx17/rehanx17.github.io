@@ -50,6 +50,36 @@ img {
 a {
   text-decoration: none;
 }
+<style>
+  .header__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header__form input,
+  .header__form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .form__btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .form__btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+
 
 html,
 body {
